@@ -1,0 +1,21 @@
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Service {
+  id    Int @id @default(autoincrement())
+  titre String
+  desc String
+  icone String
+}
+
+model Blog {
+  id    Int @id @default(autoincrement())
+  titre String
+  image String
+}
